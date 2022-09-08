@@ -1,73 +1,63 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Multiple-Choice Quiz</title>
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
 </head>
 
 <body>
-    <main>
-      
+   
+       <div class="container">
 
-        <div class="container">
-            <div id="questionscontainer" class="hide">
-            <div class="question">Question</div>
-            
-            <div id="answer-btn" class="btn-grid">
-                <button class ="btn">Answer1</button>
-                <button class ="btn">Answer2</button>
-                <button class ="btn">Answer3</button>
-                <button class ="btn">Answer4</button>
+            <div class="quizStart">
+                <h1>{ JavaScript Quick Quiz }</h1>
             </div>
-        </div>
 
-            <div class="controls">
-                <h1>{ JavaScript Multiple Choice Quiz }</h1>
+                <section id="startInstructions" class="quizStart">
                     <h2>Prepare your job interview skills and test your JavaScript knowledge </h2>
+                    <button id="startButton" class="start-btn btn">START</button>
                     
-                    <p>Keep track of your previous quiz scores and track your improvment <h2>"Compete with yourself, to reveal your best self"</h2></p>
-                    <p><strong>RULES</strong> - Answer as many questions correctly as you can before 
-                        the time runs out. Any incorrect answers will reduce your time by an additional 10 seconds.
-                    </p>
-                    
-                    
-                    <button id="start btn" class="start-btn btn">START</button>   
-                        
-                         
-             
-                <button id="next btn" class="next-btn btn hide">Next</button>
-             </div>
+                    <p><strong>RULES</strong> - Answer as many questions correctly as you can before the time runs out. Any incorrect answers will reduce your time
+                     by an additional 10 seconds. </p>
+                </section>
             
-            
-        </main>
-        <div id="img">
-            <img src="./assets/jsyellow.png">
-        </div>        
+        <quiz id="question-container" class=hide>
+            <div id="question"></div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer1</button>
+                <button class="btn">Answer2</button>
+                <button class="btn">Answer3</button>
+                <button class="btn">Answer4</button>
+            </div>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
 
-        
-        <script src="./assets/js/script.js"></script>
+        </quiz>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="./assets/js/script.js"></script>
+
+   
+     
     </body>
     
     
     
-    </html>    
+</html>
 
 
 
-     
-<!---//highscore link and timer  
-
-//Start Quiz home page with a start button>
-
-  //Quiz section titel , question, mc options, submit, ans check
-
-  //final Score
-
-  //highscore tall 
-  
-    
 
 
 
