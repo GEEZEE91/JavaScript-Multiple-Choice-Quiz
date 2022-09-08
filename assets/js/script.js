@@ -1,13 +1,33 @@
 //declare the variables needed to access all relevant elements from the html
 
-const startButton = document.getElementById('startButton')
-const nextButton = document.getElementById('next-btn')
-const resetButton = document.getElementById('reset-btn')
-const questionContainerElement = document.getElementById('question-container')
-const questionElement = document.getElementById('question')
-const answersButtonsElement = document.getElementById('answer-buttons')
-const startInstructionsElement = document.getElementById('startInstructions')
+const startButton = document.getElementById('startButton');
+const nextButton = document.getElementById('next-btn');
+const resetButton = document.getElementById('reset-btn');
+const questionContainerElement = document.getElementById('question-container');
+const questionElement = document.getElementById('question');
+const answersButtonsElement = document.getElementById('answer-buttons');
+const startInstructionsElement = document.getElementById('startInstructions');
+const spanTimer = document.getElementById('span-timer');
 
+let timerId;
+
+function startTimer(){
+
+    timerId = setInterval(function(){
+  
+      // deduct the time by 1
+      const timeRemaining = Number(spanTimer.textContent) - 1;
+      spanTimer.textContent = timeRemaining;
+      
+      if(timeRemaining <= 0){
+        clearInterval(timerId);
+      }
+    }, 1000);
+  }
+  
+  function stopTimer() {
+    clearInterval(timerId);
+  }
 
 
 let shuffledQuestions, currentQuestionIndex
@@ -24,15 +44,24 @@ nextButton.addEventListener('click', () => {
 function startGame() {
     startButton.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - 0.5)
+    startTimer() 
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
     startInstructionsElement.classList.add('hide')
     setNextQuestion()
 }
 
+
+function endGame() {
+    sectionEndGame.classList.remove('hide');
+    questionContainerElement.add('hide');
+    sectionTimer.classList.add('hide');
+  }
+
+
 function setNextQuestion() {
     resetState()
-    showQuestion(shuffledQuestions[currentQuestionIndex])
+    showQuestion(shuffledQuestions[currentQuestionIndex]) 
 }
 
 function showQuestion(question) {
@@ -67,8 +96,7 @@ function selectAnswers(e) {
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
     } else {
-        startButton.innerText = 'Restart'
-        startButton.classList.remove('hide')
+        endGame()
     }
 }
 
@@ -78,6 +106,7 @@ function setStatusClass(element, correct) {
       element.classList.add('correct')
     } else {
       element.classList.add('wrong')
+      
     }
   }
   
@@ -85,6 +114,13 @@ function setStatusClass(element, correct) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
   }
+  
+
+
+
+
+
+
   
 // Array with MC question list
 const questions = [

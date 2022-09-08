@@ -32,20 +32,57 @@ body {
 
 
 .container {
-    width: 800px;
-    max-width: 85vw;
+    width: 850px;
+    max-width: 90vw;
     background-color: #ffffff;
     border-radius: 20px;
     padding: 10px;
     box-shadow: 0 0 19px 8px rgb(9, 4, 53);
 }
 
+
+ .timer{
+    margin-left:80%;
+    color: #29b2b4;
+    background: #012c23;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 125px;
+}
+.quiz_box header .timer .time_left_txt{
+    font-weight: 400;
+    font-size: 17px;
+    user-select: none;
+}
+.quiz_box header .timer .timer_sec{
+    font-size: 18px;
+    font-weight: 500;
+    height: 30px;
+    width: 45px;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    background: #343a40;
+    border: 1px solid #343a40;
+    user-select: none;
+}
+
+
+
 #question {
-    font-size: xx-large;
+    font-size: x-large;
+  
     text-align: center ;
-    color: cadetblue;
+    color: rgb(2, 59, 61);
     padding: 25px 55px;
 }
+
+
+
 
 .btn-grid {
     display: grid;

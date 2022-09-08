@@ -24,7 +24,14 @@
                      by an additional 10 seconds. </p>
                 </section>
             
-        <quiz id="question-container" class=hide>
+ <!--MultipleChoice quiz question section -->    
+        <quiz id="question-container" class="hide">
+            
+
+            <div class="timer">
+                Timer: <span id="span-timer">80</span> (s)
+            </div>
+
             <div id="question"></div>
             <div id="answer-buttons" class="btn-grid">
                 <button class="btn">Answer1</button>
@@ -32,10 +39,35 @@
                 <button class="btn">Answer3</button>
                 <button class="btn">Answer4</button>
             </div>
-            <button id="next-btn" class="next-btn btn hide">Next</button>
+            <button id="next-btn" class="next-btn btn ">Next</button>
 
         </quiz>
-    </div>
+
+
+        <section id="section-end-game" class="hide">
+
+            <h1>Game Over!</h1>
+            <p>Your score is: <span id="result-span">10</span></p>
+            <!-- form to enter initials -->
+            <!-- button to save the initials -->
+            <form id="form-initials">
+              <input type="text" placeholder="initials here" id="input-initials">
+              <button type="submit"  >Save</button>
+            </form>
+          </section>
+
+
+  <section id="section-highscore" class="hide">
+    <h1>Highscores</h1>
+
+    <ul>
+      <li class="highscore-items">Sam - 10</li>
+      <li class="highscore-items">Alice - 20</li>
+      <li class="highscore-items">Jake - 25</li>
+    </ul>
+
+    <button id="button-home">Back to home</button>
+  </section>
 
 
 
