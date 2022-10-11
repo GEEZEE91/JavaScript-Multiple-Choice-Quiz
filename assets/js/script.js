@@ -16,7 +16,6 @@ var restartButton = document.getElementById("restart-btn");
 var scores = JSON.parse(localStorage.getItem("scores")) || [];
 
 var timeLeft = 75;
-var timerID;
 var timerEl = document.getElementById("timer");
 
 let right = 0;
@@ -121,14 +120,14 @@ function selectAnswer(e) {
 function setStatusClass(selectedbutton) {
     document.getElementById("status").classList.remove('hide');
     if (selectedbutton.dataset.correct) {
-        selectedbutton.classList.add('correct')
-        document.getElementById("incorrect").classList.add('hide')
-        document.getElementById("correct").classList.remove('hide')
+        selectedbutton.classList.add('correct');
+        document.getElementById("incorrect").classList.add('hide');
+        document.getElementById("correct").classList.remove('hide');
         right += 10;
     } else {
-        selectedbutton.classList.add('wrong')
-        document.getElementById("incorrect").classList.remove('hide')
-        document.getElementById("correct").classList.add('hide')
+        selectedbutton.classList.add('wrong');
+        document.getElementById("incorrect").classList.remove('hide');
+        document.getElementById("correct").classList.add('hide');
         timeLeft -= 10;
     } 
 }
