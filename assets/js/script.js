@@ -94,7 +94,7 @@ function disableChildrenButtons(button) {
 }
 
 function resetState()  {
-    
+      nextButton.classList.add("hide")
     document.getElementById("status").classList.add('hide');
     while (answersButtonElement.firstChild) {
         answersButtonElement.removeChild(answersButtonElement.firstChild)
