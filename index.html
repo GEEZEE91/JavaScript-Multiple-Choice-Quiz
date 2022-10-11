@@ -11,8 +11,12 @@
 <body>
    
        <div class="container">
+    
 
             <div class="quizStart">
+                    <div class="scores btn">
+                        <a id="highscores-link">View high scores</a>
+                    </div>
                 <h1>{ JavaScript Quick Quiz }</h1>
             </div>
 
@@ -26,12 +30,9 @@
             
  <!--MultipleChoice quiz question section -->    
         <quiz id="question-container" class="hide">
-            
-
-            <div class="timer">
-                Timer: <span id="span-timer">80</span> (s)
+            <div id="timer" class="timer">
+                Time: 75
             </div>
-
             <div id="question"></div>
             <div id="answer-buttons" class="btn-grid">
                 <button class="btn">Answer1</button>
@@ -39,61 +40,41 @@
                 <button class="btn">Answer3</button>
                 <button class="btn">Answer4</button>
             </div>
-            <button id="next-btn" class="next-btn btn ">Next</button>
+
+            <div id="status" class="status">
+              <span id="correct">Right</span>
+              <span id="incorrect">Wrong</span>
+           </div>
+
+           <button id="next-btn" class="next-btn btn">Next</button> 
 
         </quiz>
 
-
-        <section id="section-end-game" class="hide">
-
-            <h1>Game Over!</h1>
-            <p>Your score is: <span id="result-span">10</span></p>
-            <!-- form to enter initials -->
-            <!-- button to save the initials -->
-            <form id="form-initials">
-              <input type="text" placeholder="initials here" id="input-initials">
-              <button type="submit"  >Save</button>
+        <section id="score-container" class="hide">
+            <form id="submit-form">
+                <h3 id="your-score"></h3>
+                <label id="initials-label">Enter your initials to save the score:</label>
+                <input type="text" id="initials-field" maxlength="3" placeholder="Enter your initials" />
+                <button id="submit-btn" class="btn">Submit</button>
             </form>
-          </section>
+        </section>
+        
+        <section id="highscores" class="highscores-container hide">
+            <div id="high-scores">
+                <h1 class="centered">Leaderboard</h1>
+                <div id="highscore" class="highscore highscore-list">
+                </div>
+                <div class="controls">
+                    <button id="restart-btn" class="btn">Restart</button>
+                    <button id="clear-btn" class="btn">Clear Scores</button>
+                </div>
+            </div>
+        </section>
+
+      </div>
 
 
-  <section id="section-highscore" class="hide">
-    <h1>Highscores</h1>
-
-    <ul>
-      <li class="highscore-items">Sam - 10</li>
-      <li class="highscore-items">Alice - 20</li>
-      <li class="highscore-items">Jake - 25</li>
-    </ul>
-
-    <button id="button-home">Back to home</button>
-  </section>
-
-
-
-
-
-
-
-
-
-
-    <script src="./assets/js/script.js"></script>
-
-   
-     
-    </body>
-    
-    
-    
+ <script src="./assets/js/script.js"></script>
+ </body>  
 </html>
-
-
-
-
-
-
-
-
-
 
