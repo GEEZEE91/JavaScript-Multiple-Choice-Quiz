@@ -122,14 +122,13 @@ function setStatusClass(selectedbutton) {
     document.getElementById("status").classList.remove('hide');
     if (selectedbutton.dataset.correct) {
         selectedbutton.classList.add('correct')
-        document.getElementById("incorrect").classList.add('hide');
-        document.getElementById("correct").classList.remove('hide');
+        document.getElementById("incorrect").classList.add('hide')
+        document.getElementById("correct").classList.remove('hide')
         right += 10;
     } else {
-        selectedbutton.classList.add('wrong');
-        selectedbutton.classList.add('correct')
-        document.getElementById("incorrect").classList.remove('hide');
-        document.getElementById("correct").classList.add('hide');
+        selectedbutton.classList.add('wrong')
+        document.getElementById("incorrect").classList.remove('hide')
+        document.getElementById("correct").classList.add('hide')
         timeLeft -= 10;
     } 
 }
