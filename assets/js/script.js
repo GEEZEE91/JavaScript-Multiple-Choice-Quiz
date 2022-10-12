@@ -38,7 +38,7 @@ nextButton.addEventListener('click', () => {
     setNextQuestion()
 })
 
-
+// timer display and run out of time action
 function timeTick() {
     timeLeft--;
     timerEl.textContent = "Time: " + timeLeft + " Secs";
@@ -49,7 +49,7 @@ function timeTick() {
 }
 
 
-// hide start button , make question div visable, and hide start page intro blurb
+// hide start button , make question div visable, start timer, score index set 0 and hide start page intro blurb and high score btn
 function startGame() {
     right = 0;
     startButton.classList.add('hide')
@@ -65,7 +65,7 @@ function startGame() {
 
 
 
-
+// set nxt question unless out of questions
 function setNextQuestion () {
     resetState();
     if (shuffledQuestion.length < currentQuestion + 1) {
@@ -77,7 +77,7 @@ function setNextQuestion () {
     }   
 }
 
-
+// append question and corresponding answers options from array
 function showQuestion(question) {
     questionElement.innerText = question.question
     question.answers.forEach(answers => {
@@ -91,14 +91,14 @@ function showQuestion(question) {
         answersButtonElement.appendChild(button)
     })
 }
-
+//stop user selecting diffrent answer button after initial anser selected
 function disableChildrenButtons(button) {
     var parent = button.parentElement;
     parent.childNodes.forEach(element => {
         element.disabled = true;
     }); 
 }
-
+//clear status r or w, new question set new answer , hide next btn till user selects answer again
 function resetState()  {
       nextButton.classList.add("hide")
     document.getElementById("status").classList.add('hide');
@@ -108,7 +108,7 @@ function resetState()  {
 }
 
 
-// Select answer function
+// Select answer function if select show hide, diabled extra press, set staus wright ot wrong function
 function selectAnswer(e) {
     var selectedButton = e.target;
     disableChildrenButtons(e.target);
@@ -120,7 +120,7 @@ function selectAnswer(e) {
     }}
 
 
-// for each question answered set class colour right ot wronge, show status w or r text at bottem, add to score if correct deduct 10 sec if wrong
+// for each question answered set class colour right ot wrong, show status w or r text at bottem, add to score if correct deduct 10 sec if wrong
 function setStatusClass(selectedbutton) {
     document.getElementById("status").classList.remove('hide');
     if (selectedbutton.dataset.correct) {
@@ -136,16 +136,13 @@ function setStatusClass(selectedbutton) {
     } 
 }
 
-  
+ // clear class right or wrong 
   function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
-  }
+ }
 
 
-
-
-  
 // Array with MC question list
 const question = [
     {
