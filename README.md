@@ -1,14 +1,14 @@
-# JavaScript  Multiple Choice Quiz 
+# Multiple Choice Quiz - JavaScript 
 
 
-**About The Project**
+## About The Project
   
   
  Timed Multiple Choice Quiz that enables user to test there JavaScript knowledge and keep track of there score over time so they can monitor their progress.
  
 This app is built using basic HTML, JS and CSS.
  
-The test consits of 8 ten multiple choice questions, the user is given 60 seconds to complete the test for every incorrect answer 10 seconds is deducted of the time.
+The test consits of 7 ten multiple choice questions, the user is given 70 seconds to complete the test for every incorrect answer 10 seconds is deducted of the time.
 
 Once the time runs out it is Game Over and no more questions can be answered and your score is based on what you answered correctly before the time ran out.
 
@@ -22,7 +22,7 @@ The high score section can also be accessed from the home page.
  
 
 
-**Usage**
+## Usage
 
 
 This project can be used by anyone who wishes to test out there Javascript knowledge by completing this simple multiple choice test. 
@@ -35,22 +35,28 @@ It can also be used as a template to create any custimised test required simply 
 
 A lot better than using paper flashcards.
 
+## Demo
 
-**Demo**
+  -Quiz Start Page
+https://github.com/GEEZEE91/JavaScript-Multiple-Choice-Quiz/blob/main/assets/images/start.png
+
+  Quiz (Answer Correct vs Incorrect)
+  -Next button appears once answer selected, CSS class added on selected button indicating is right, also text added stating answer status is "Right", 10 pointsa per correct answer added but can not be seen until the quiz is over and final score displayed.
+https://github.com/GEEZEE91/JavaScript-Multiple-Choice-Quiz/blob/main/assets/images/right.png
+
+  -Next button appears once answer selected, CSS class added on selected button indicating is wrong, also text stating answer "Wrong" , 10 secs deducted of time.
+https://github.com/GEEZEE91/JavaScript-Multiple-Choice-Quiz/blob/main/assets/images/wrong.png
+
+- Final Score (allows user to submit and save there score locally)
+-https://github.com/GEEZEE91/JavaScript-Multiple-Choice-Quiz/blob/main/assets/images/score.png
+
+- Highscore Container
+https://github.com/GEEZEE91/JavaScript-Multiple-Choice-Quiz/blob/main/assets/images/highscore.png
 
 
-Watch the gif below to see how the quiz works.
 
 
-https://user-images.githubusercontent.com/3950562/190502710-67b91d6d-4295-4c4d-88b4-57f6b96fdd34.mp4
-
-
-
-![Screenshot 2022-09-15 153347](https://user-images.githubusercontent.com/3950562/190502632-b3d7f115-e417-407c-899e-6b726c61f434.png)
-
-
-
-**Deployed Link**
+## Deployed Link
 
 App can be used and accessed via any browser. 
 
