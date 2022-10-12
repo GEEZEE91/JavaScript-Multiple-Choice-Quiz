@@ -21,9 +21,7 @@ User is give option to play again or clear the scores saved.
 The high score section can also be accessed from the home page.
  
 
-
 ## Usage
-
 
 This project can be used by anyone who wishes to test out there Javascript knowledge by completing this simple multiple choice test. 
 
@@ -37,7 +35,7 @@ A lot better than using paper flashcards.
 
 ## Demo
 
- ###Quiz Start Page
+ ### Quiz Start Page
 ![start](https://user-images.githubusercontent.com/3950562/195262026-159cc3e7-87a1-47ce-8137-dcc6a1db483c.png)
 
  ### Quiz (Answer Correct vs Incorrect)
