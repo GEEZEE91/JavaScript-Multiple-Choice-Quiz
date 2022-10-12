@@ -17,10 +17,11 @@
 }
 
 
-html,
+.html{
+
+}
 body {
-  margin: 0;
-  padding: 0;
+ 
   display:flex;
   width: 100vw;
   height: 100vh;
@@ -50,14 +51,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 125px;
+    font-weight: 400;
+    font-size: 17px;
+
+   
 }
-.quiz_box header .timer .time_left_txt{
+.quiz_box header {
     font-weight: 400;
     font-size: 17px;
     user-select: none;
 }
-.quiz_box header .timer .timer_sec{
+.quiz_box header  {
     font-size: 18px;
     font-weight: 500;
     height: 30px;
@@ -75,7 +79,6 @@ body {
 
 #question {
     font-size: x-large;
-  
     text-align: center ;
     color: rgb(2, 59, 61);
     padding: 25px 55px;
@@ -102,12 +105,12 @@ body {
     margin-bottom: 25px ;
 }
 
-.btn.correct{
-    background-color: var(--bluegreen);  
-  }
-  .btn.wrong{
-      background-color: #8d1f1f;
-  }
+.next-btn {
+    margin-left: 80%;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--bluegreen);
+}
   
 .btn:hover {
 background-color: var(--darkgreen);
@@ -124,7 +127,7 @@ background-color: var(--darkgreen);
     text-align: center;
     font-size: 3rem;
     font-weight: 800;
-    padding: 15px;
+    padding: 10px;
     color: var(--darkgreen);
 }
 .quizStart h2{
@@ -152,14 +155,64 @@ background-color: var(--darkgreen);
     font-weight: bolder;
 }
 
+.restart-btn{
+    background-color: orangered;
+    margin: 25px;
+
+}
+
+.controls{
+    padding: 25px;
+}
+
 .hide {
     display: none;
 }
 
-.next-btn {
-    margin-left: 80%;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: var(--bluegreen);
+
+
+.status{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 10px;
 }
 
+#correct{
+    color: var(--bluegreen);  
+}
+#incorrect{
+    color:  #8d1f1f;
+}
+.btn.correct{
+    background-color: var(--bluegreen);  
+  }
+  .btn.wrong{
+      background-color: #8d1f1f;
+  }
+
+
+#score-container p{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ff6200;
+    text-align: center;
+    padding: 25px;
+    text-align: center;
+  }
+
+
+#initials-label{
+    font-size: 1.3rem;
+    color: var(--darkblue);
+    text-align: center;
+    padding: 20px;
+}
+
+.highscores-container{
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    text-align: center;
+    padding: 25px;
+    text-align: center;
+}
