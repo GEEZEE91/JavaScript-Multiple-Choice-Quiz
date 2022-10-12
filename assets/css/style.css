@@ -221,7 +221,7 @@ background-color: var(--darkgreen);
     margin: 25px;
 }
 
-@media (max-width:768px) { 
+@media (max-width:915px) { 
 
     .timer{
         margin-left: 20px;
