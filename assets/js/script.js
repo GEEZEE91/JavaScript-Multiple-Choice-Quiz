@@ -241,7 +241,7 @@ var loadScores = function () {
 };
 // Show high score section 
 function showHighScores(initials) {
-    document.getElementById("highscores").classList.remove("hide")
+    document.getElementById("highscores").classList.remove("hide");
     document.getElementById("score-container").classList.add("hide");
     startInstructionsElement.classList.add("hide");
     questionContainerElement.classList.add("hide");
