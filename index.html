@@ -11,13 +11,12 @@
 <body>
    
        <div class="container">
-    
+        <button class="scores-btn btn" id="scores-btn">
+            View High Scores
+        </button>
 
-            <div class="quizStart">
-                    <div class="scores btn">
-                        <a id="highscores-link">View high scores</a>
-                    </div>
-                <h1>{ JavaScript Quick Quiz }</h1>
+            <div class="quizStart">  
+                <h1>JavaScript Quick Quiz</h1>
             </div>
 
                 <section id="startInstructions" class="quizStart">
@@ -30,9 +29,11 @@
             
  <!--MultipleChoice quiz question section -->    
         <quiz id="question-container" class="hide">
+            
             <div id="timer" class="timer">
-                Time: 75
+                Time: 70 Sec
             </div>
+
             <div id="question"></div>
             <div id="answer-buttons" class="btn-grid">
                 <button class="btn">Answer1</button>
@@ -51,21 +52,26 @@
         </quiz>
 
         <section id="score-container" class="hide">
-            <form id="submit-form">
-                <p>Good Job!</p>
+            <form id="submit-form"  class="submit-info">
+                <p>Good Job !!!</p>
                 <p id="your-score"></p>
-                <label id="initials-label">Enter your initials to save the score:</label>
-                <input type="text" id="initials-field" maxlength="10" placeholder="Enter your initials" />
                
-                <button id="submit-btn" class="btn">Submit</button>
+                <label id="initials-label">Enter your name to save the score:</label>
+                <br>
+                <input type="text" id="initials-field" maxlength="10" placeholder="Enter your name to save the score" />
+                <br>
+                
+                <button id="submit-btn" class="submit-btn btn">Submit</button>
+                <button id="restar-btn" class="restart-btn btn">Start Again</button>
             </form>
         </section>
         
         <section id="highscores" class="highscores-container hide">
             <div id="high-scores">
                 <h1 class="centered">Leaderboard</h1>
-                <div id="highscore" class="highscore highscore-list">
-                </div>
+                
+                <div id="highscore" class="highscore highscore-list"></div>
+
                 <div class="controls">
                     <button id="restart-btn" class="restart-btn btn">Play Again!</button>
                     <button id="clear-btn" class="btn">Clear Scores</button>
