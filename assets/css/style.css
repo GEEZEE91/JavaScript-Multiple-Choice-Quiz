@@ -17,11 +17,8 @@
 }
 
 
-.html{
-
-}
+html
 body {
- 
   display:flex;
   width: 100vw;
   height: 100vh;
@@ -38,21 +35,22 @@ body {
     background-color: #ffffff;
     border-radius: 20px;
     padding: 10px;
-    box-shadow: 0 0 19px 8px rgb(9, 4, 53);
+    box-shadow: 0 0 12px black;
+    
 }
 
 
  .timer{
-    margin-left:80%;
-    color: #29b2b4;
-    background: #012c23;
+    margin-left:75%;
+    color: #8aecec;
+    background: #041f19;
+  font-weight: bolder;
+    border: 10px;
+    border-radius: 10px;
     padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: 400;
-    font-size: 17px;
+    font-size: medium;
+    box-shadow: 0 0 12px black;
+    text-align: center;
 
    
 }
@@ -78,10 +76,11 @@ body {
 
 
 #question {
-    font-size: x-large;
+    font-size: xx-large;
     text-align: center ;
-    color: rgb(2, 59, 61);
-    padding: 25px 55px;
+    font-weight: 600;
+    color: 041f19;
+    padding : 25px 55px;
 }
 
 
@@ -99,17 +98,17 @@ body {
     color: aliceblue;
     border: 10px;
     border-radius: 10px;
-    padding: 25px;
+    padding: 20px;
     font-size: medium;
     box-shadow: 0 0 12px black;
-    margin-bottom: 25px ;
+    margin-bottom: 10px ;
 }
 
 .next-btn {
-    margin-left: 80%;
-    font-size: 1rem;
+    margin-left: 75%;
+    font-size: 1.2rem;
     font-weight: bold;
-    background-color: var(--bluegreen);
+
 }
   
 .btn:hover {
@@ -170,9 +169,8 @@ background-color: var(--darkgreen);
 }
 
 
-
 .status{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
     padding: 10px;
 }
@@ -186,7 +184,7 @@ background-color: var(--darkgreen);
 .btn.correct{
     background-color: var(--bluegreen);  
   }
-  .btn.wrong{
+.btn.wrong{
       background-color: #8d1f1f;
   }
 
@@ -195,8 +193,6 @@ background-color: var(--darkgreen);
     font-size: 1.5rem;
     font-weight: 600;
     color: #ff6200;
-    text-align: center;
-    padding: 25px;
     text-align: center;
   }
 
@@ -211,8 +207,41 @@ background-color: var(--darkgreen);
 .highscores-container{
     font-size: 1.5rem;
     font-weight: 600;
-
     text-align: center;
     padding: 25px;
     text-align: center;
+}
+
+.scores-btn{
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+.name-div{
+  color: #ff6200;
+}
+
+.score-div{
+    color: #0f0702;
+}
+.score-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.submit-info{ 
+    text-align: center;
+   
+}
+.submit-btn{
+    margin-left: 25px;
+}
+
+#initials-field{
+    width: 40%;
+    height: 5vh;
+    margin: 25px;
 }
