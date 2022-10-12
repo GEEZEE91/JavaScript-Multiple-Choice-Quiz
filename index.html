@@ -52,9 +52,11 @@
 
         <section id="score-container" class="hide">
             <form id="submit-form">
-                <h3 id="your-score"></h3>
+                <p>Good Job!</p>
+                <p id="your-score"></p>
                 <label id="initials-label">Enter your initials to save the score:</label>
-                <input type="text" id="initials-field" maxlength="3" placeholder="Enter your initials" />
+                <input type="text" id="initials-field" maxlength="10" placeholder="Enter your initials" />
+               
                 <button id="submit-btn" class="btn">Submit</button>
             </form>
         </section>
@@ -65,7 +67,7 @@
                 <div id="highscore" class="highscore highscore-list">
                 </div>
                 <div class="controls">
-                    <button id="restart-btn" class="btn">Restart</button>
+                    <button id="restart-btn" class="restart-btn btn">Play Again!</button>
                     <button id="clear-btn" class="btn">Clear Scores</button>
                 </div>
             </div>
