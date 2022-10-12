@@ -37,26 +37,31 @@ A lot better than using paper flashcards.
 
 ## Demo
 
-  -Quiz Start Page
-https://github.com/GEEZEE91/JavaScript-Multiple-Choice-Quiz/blob/main/assets/images/start.png
+ ###Quiz Start Page
+![start](https://user-images.githubusercontent.com/3950562/195262026-159cc3e7-87a1-47ce-8137-dcc6a1db483c.png)
 
-  Quiz (Answer Correct vs Incorrect)
-  -Next button appears once answer selected, CSS class added on selected button indicating is right, also text added stating answer status is "Right", 10 pointsa per correct answer added but can not be seen until the quiz is over and final score displayed.
-https://github.com/GEEZEE91/JavaScript-Multiple-Choice-Quiz/blob/main/assets/images/right.png
+ ### Quiz (Answer Correct vs Incorrect)
+ 
+ CORRECT: Next button appears once answer selected, CSS class added on selected button indicating is right, also text added stating answer status is "Right", 10 pointsa per correct answer added but can not be seen until the quiz is over and final score displayed.
+  
+![right](https://user-images.githubusercontent.com/3950562/195262157-9072b6fd-6f1e-4129-bd66-c217ac16c162.png)
 
-  -Next button appears once answer selected, CSS class added on selected button indicating is wrong, also text stating answer "Wrong" , 10 secs deducted of time.
-https://github.com/GEEZEE91/JavaScript-Multiple-Choice-Quiz/blob/main/assets/images/wrong.png
+  INCORRECT: Next button appears once answer selected, CSS class added on selected button indicating is wrong, also text stating answer "Wrong" , 10 secs deducted of timer.
+  
+![wrong](https://user-images.githubusercontent.com/3950562/195262169-0942ed9f-44e8-403b-beec-89b07d67e175.png)
 
-- Final Score (allows user to submit and save there score locally)
--https://github.com/GEEZEE91/JavaScript-Multiple-Choice-Quiz/blob/main/assets/images/score.png
+###Final Score (allows user to submit and save there score locally)
+![score](https://user-images.githubusercontent.com/3950562/195262078-d34bc636-65c6-4626-826b-38482c830e5d.png)
 
-- Highscore Container
-https://github.com/GEEZEE91/JavaScript-Multiple-Choice-Quiz/blob/main/assets/images/highscore.png
+
+### Highscore Container
+![image](https://user-images.githubusercontent.com/3950562/195261986-a3d9ea9f-25b2-4cb9-8578-2622c6fe01af.png)
 
 
 
 
 ## Deployed Link
+
 
 App can be used and accessed via any browser. 
 
