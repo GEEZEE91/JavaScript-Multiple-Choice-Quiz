@@ -8,14 +8,18 @@ const answersButtonElement = document.getElementById('answer-buttons');
 const startInstructionsElement = document.getElementById('startInstructions');
 
 const status = document.getElementById("status");
+const yourScore = document.getElementById("your-score")
+const scoreElement = document.getElementById("score-container");
 
-var viewHighScores = document.getElementById("highscores-link");
+var viewHighScores = document.getElementById("scores-btn");
 var submitButton = document.getElementById("submit-btn");
 var clearScoreButton = document.getElementById("clear-btn");
+var restartButton1 = document.getElementById("restar-btn");
 var restartButton = document.getElementById("restart-btn");
+
 var scores = JSON.parse(localStorage.getItem("scores")) || [];
 
-var timeLeft = 75;
+var timeLeft = 70;
 var timerEl = document.getElementById("timer");
 
 let right = 0;
@@ -37,8 +41,9 @@ nextButton.addEventListener('click', () => {
 
 function timeTick() {
     timeLeft--;
-    timerEl.textContent = "Time: " + timeLeft;
+    timerEl.textContent = "Time: " + timeLeft + " Secs";
     if (timeLeft <= 0) {
+        timerEl.textContent = "GAME OVER !!!" 
         saveScore();
     }
 }
@@ -50,6 +55,7 @@ function startGame() {
     startButton.classList.add('hide')
     shuffledQuestion = question.sort(() => Math.random() - 0.5)   
     currentQuestion = 0
+    viewHighScores.classList.add('hide')
     questionContainerElement.classList.remove('hide')
     startInstructionsElement.classList.add('hide')
     setNextQuestion()
@@ -110,13 +116,11 @@ function selectAnswer(e) {
     if (shuffledQuestion.length > currentQuestion + 1) {
         nextButton.classList.remove("hide")
     } else {
-        nextButton.classList.add("hide")
-        startButton.classList.remove("hide")
         saveScore();
     }}
 
 
-
+// for each question answered set class colour right ot wronge, show status w or r text at bottem, add to score if correct deduct 10 sec if wrong
 function setStatusClass(selectedbutton) {
     document.getElementById("status").classList.remove('hide');
     if (selectedbutton.dataset.correct) {
@@ -158,7 +162,8 @@ const question = [
             {text: 'Undefined type', correct: false},
             {text: 'Number type', correct: false},
             {text: 'All of the mentioned', correct: true}]
-    }, {
+    }, 
+    {
         question: 'Which of the following object is the main entry point to all client-side JavaScript features and APIs?',
         answers: [
             {text: 'Position', correct: false},
@@ -199,35 +204,32 @@ const question = [
 ]
 
 
-// Save scores
+// Show Final score end quiz section and record name and score form
 function saveScore() {
+//stop timer
     clearInterval(timerID);
-    document.getElementById("score-container").classList.remove("hide");
 
-    questionContainerElement.classList.add('hide')
+    
+ //sec time out to show last question before final score shows up     
     setTimeout(function () {
-        //localStorage.setItem("scores", JSON.stringify(scores));
-        startInstructionsElement.classList.add("hide");
-        document.getElementById("your-score").textContent = "Your final score is " + right;
+        questionContainerElement.classList.add('hide')
+        scoreElement.classList.remove('hide');
+ //set a 1.5 sec time out   
+    }, 1500)
+    yourScore.textContent = "Your Final Score is " + right + "/70";
+}
 
-    }, 1000)
-};
-
-
+ // Get score from local storage
 var loadScores = function () {
-    // Get score from local storage
-
     if (!savedScores) {
         return false;
-    }
-
-    // Convert scores from stringfield format into array
+     }
+ // Convert scores from stringfield format into array
     let savedScores = JSON.parse(savedScores);
     var initials = document.querySelector("#initials-field").value;
     var newScore = {
         initials: initials,
-        userScore: right,
-       
+        userScore: right,     
     }
     savedScores.push(newScore);
     console.log(savedScores)
@@ -237,9 +239,7 @@ var loadScores = function () {
         scoreField.innerText = score.right
     })
 };
-
-
-// Show high scores
+// Show high score section 
 function showHighScores(initials) {
     document.getElementById("highscores").classList.remove("hide")
     document.getElementById("score-container").classList.add("hide");
@@ -248,15 +248,15 @@ function showHighScores(initials) {
     if (typeof initials == "string") {
         var score = {
             initials: initials,
-            userScore: right,
-            
+            userScore: right,          
         }
         scores.push(score)
     }
 
-    var highScoreEl = document.getElementById("highscore");
+var highScoreEl = document.getElementById("highscore");
     highScoreEl.innerHTML = "";
-    //console.log(scores)
+
+//append name and score to high score section, create div for name and div for score
     for (i = 0; i < scores.length; i++) {
         var div1 = document.createElement("div");
         div1.setAttribute("class", "name-div");
@@ -268,16 +268,14 @@ function showHighScores(initials) {
         highScoreEl.appendChild(div1);
         highScoreEl.appendChild(div2);
     }
-
-    localStorage.setItem("scores", JSON.stringify(scores));
-
+localStorage.setItem("scores", JSON.stringify(scores));
 };
 
 
-// View high scores link
+// View high scores btn on first page
 viewHighScores.addEventListener("click", showHighScores);
 
-
+//get score and name to pass thru and set score, & show highscore section after initials submited
 submitButton.addEventListener("click", function (event) {
     event.preventDefault()
     var initials = document.querySelector("#initials-field").value;
@@ -286,13 +284,17 @@ submitButton.addEventListener("click", function (event) {
 });
 
 
-// Restart or reload the page
+// Restart or reload the page- submit score section
+restartButton1.addEventListener("click", function () {
+    window.location.reload();
+});
+// Restart or reload the page save score section -high score section
 restartButton.addEventListener("click", function () {
     window.location.reload();
 });
 
 
-// Clear localStorage items 
+// Clear high score btn - clear localStorage items 
 clearScoreButton.addEventListener("click", function () {
     localStorage.clear();
     document.getElementById("highscore").innerHTML = "";
