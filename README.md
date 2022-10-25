@@ -8,7 +8,7 @@
  
 This app is built using basic HTML, JS and CSS.
  
-The test consits of 7 ten multiple choice questions, the user is given 70 seconds to complete the test for every incorrect answer 10 seconds is deducted of the time.
+The test consits of 7 multiple choice questions, the user is given 70 seconds to complete the test for every incorrect answer 10 seconds is deducted of the time.
 
 Once the time runs out it is Game Over and no more questions can be answered and your score is based on what you answered correctly before the time ran out.
 
